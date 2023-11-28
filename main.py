@@ -1,6 +1,7 @@
  # Importing modules
 import pickle # For loading model
 import streamlit as st # For web app
+import os
 import pandas as pd
 import numpy as np
 from sklearn.feature_extraction.text import CountVectorizer
@@ -16,11 +17,19 @@ st.set_page_config(
     initial_sidebar_state="collapsed"
 )
 
+# Mendapatkan path ke folder data
+data_folder = os.path.join(os.path.dirname(__file__), 'data')
+
+# Membangun path ke file pickle
+df_path = os.path.join(data_folder, 'df.pkl')
+result_tfidf_path = os.path.join(data_folder, 'resulttfidf_wisata.pkl')
+vector_tfidf_path = os.path.join(data_folder, 'vector_tfidf.pkl')
+
 # Loading data frame
 try:
-    rec_wisata = pickle.load(open('df.pkl', 'rb'))
-    result_tfidf = pickle.load(open('resulttfidf_wisata.pkl', 'rb'))
-    vector_tfidf = pickle.load(open('vector_tfidf.pkl', 'rb'))
+    rec_wisata = pickle.load(open(df_path, 'rb'))
+    result_tfidf = pickle.load(open(result_tfidf_path, 'rb'))
+    vector_tfidf = pickle.load(open(vector_tfidf_path, 'rb'))
 except FileNotFoundError:
     st.error("File not found. Make sure the pickle files are in the correct directory.")
 except Exception as e:
