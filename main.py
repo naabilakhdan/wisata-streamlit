@@ -18,14 +18,9 @@ st.set_page_config(
 
 # Loading data frame
 try:
-    rec_wisata = pickle.load(open('df.pkl', 'rb'))
-    result_tfidf = pickle.load(open('resulttfidf_wisata.pkl', 'rb'))
-    vector_tfidf = pickle.load(open('vector_tfidf.pkl', 'rb'))
-except FileNotFoundError:
-    st.error("File not found. Make sure the pickle files are in the correct directory.")
-except Exception as e:
-    st.error(f"Error loading pickle files: {e}")
-
+rec_wisata = pickle.load(open('df.pkl','rb'))
+result_tfidf = pickle.load(open('resulttfidf_wisata.pkl','rb'))
+vector_tfidf = pickle.load(open('vector_tfidf.pkl','rb'))
 # Main heading
 # st.image("images/logobalinest.png")
 st.title('REKOMENDASI WISATA DI BANDUNG')
