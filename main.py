@@ -57,7 +57,7 @@ def recommend(data):
     recommended_description = []
     recommended_price = []
     for n, place_id in enumerate(result_desc):
-        if n > 5:
+        if n > 2:
             break
         recommended_image.append(rec_wisata.loc[place_id,'image'])
         recommended_place_name.append(rec_wisata.loc[place_id, 'place_name'])
