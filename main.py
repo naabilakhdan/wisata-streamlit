@@ -84,10 +84,9 @@ if st.button('Tampilkan Rekomendasi'):
                 st.write(recommended_city[0])
             with st.expander("Deskripsi"):
                 st.write(recommended_description[0])
-            with st.expander("Tiket Saat Weekend"):
+            with st.expander("Harga Tiket Masuk"):
                 st.write(recommended_weekend[0])
-            with st.expander("Tiket Saat Weekday"):
-                st.write(recommended_weekday[0])
+
 
     with st.container():
         col1, col2 = st.columns(2)
@@ -99,10 +98,9 @@ if st.button('Tampilkan Rekomendasi'):
                 st.write(recommended_city[1])
             with st.expander("Deskripsi"):
                 st.write(recommended_description[1])
-            with st.expander("Tiket Saat Weekend"):
+            with st.expander("Harga Tiket Masuk"):
                 st.write(recommended_weekend[1])
-            with st.expander("Tiket Saat Weekday"):
-                st.write(recommended_weekday[1])
+
 
     with st.container():
         col1, col2 = st.columns(2)
@@ -114,10 +112,9 @@ if st.button('Tampilkan Rekomendasi'):
                 st.write(recommended_city[2])
             with st.expander("Deskripsi"):
                 st.write(recommended_description[2])
-            with st.expander("Tiket Saat Weekend"):
+            with st.expander("Harga Tiket Masuk"):
                 st.write(recommended_weekend[2])
-            with st.expander("Tiket Saat Weekday"):
-                st.write(recommended_weekday[2])
+
 
     with st.container():
         col1, col2 = st.columns(2)
@@ -129,10 +126,9 @@ if st.button('Tampilkan Rekomendasi'):
                 st.write(recommended_city[3])
             with st.expander("Deskripsi"):
                 st.write(recommended_description[3])
-            with st.expander("Tiket Saat Weekend"):
+            with st.expander("Harga Tiket Masuk"):
                 st.write(recommended_weekend[3])
-            with st.expander("Tiket Saat Weekday"):
-                st.write(recommended_weekday[3])
+
 
     with st.container():
         col1, col2 = st.columns(2)
@@ -144,7 +140,5 @@ if st.button('Tampilkan Rekomendasi'):
                 st.write(recommended_city[4])
             with st.expander("Deskripsi"):
                 st.write(recommended_description[4])
-            with st.expander("Tiket Saat Weekend"):
+            with st.expander("Harga Tiket Masuk"):
                 st.write(recommended_weekend[4])
-            with st.expander("Tiket Saat Weekday"):
-                st.write(recommended_weekday[4])
