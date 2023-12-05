@@ -55,23 +55,22 @@ def recommend(data):
     recommended_place_name = []
     recommended_city = []
     recommended_description = []
-    recommended_weekend = []
-    recommended_weekday = []
+    recommended_price = []
     for n, place_id in enumerate(result_desc):
-        if n > 4:
+        if n > 5:
             break
         recommended_image.append(rec_wisata.loc[place_id,'image'])
         recommended_place_name.append(rec_wisata.loc[place_id, 'place_name'])
         recommended_city.append(rec_wisata.loc[place_id, 'city'])
         recommended_description.append(rec_wisata.loc[place_id, 'description'])
-        recommended_weekend.append(rec_wisata.loc[place_id, 'weekend_price'])
-        recommended_weekday.append(rec_wisata.loc[place_id, 'weekday_price'])
+        recommended_price.append(rec_wisata.loc[place_id, 'price'])
 
-    return recommended_image, recommended_place_name, recommended_city, recommended_description, recommended_weekend, recommended_weekday
+
+    return recommended_image, recommended_place_name, recommended_city, recommended_description, recommended_price
 
 
 if st.button('Tampilkan Rekomendasi'):
-    recommended_image, recommended_place_name, recommended_city, recommended_description, recommended_weekend, recommended_weekday = recommend(test)
+    recommended_image, recommended_place_name, recommended_city, recommended_description, recommended_price = recommend(test)
 
     #display with the columns
     with st.container():
@@ -85,8 +84,7 @@ if st.button('Tampilkan Rekomendasi'):
             with st.expander("Deskripsi"):
                 st.write(recommended_description[0])
             with st.expander("Harga Tiket Masuk"):
-                st.write(recommended_weekend[0])
-
+                st.write(recommended_price[0])
 
     with st.container():
         col1, col2 = st.columns(2)
@@ -99,8 +97,7 @@ if st.button('Tampilkan Rekomendasi'):
             with st.expander("Deskripsi"):
                 st.write(recommended_description[1])
             with st.expander("Harga Tiket Masuk"):
-                st.write(recommended_weekend[1])
-
+                st.write(recommended_price[1])
 
     with st.container():
         col1, col2 = st.columns(2)
@@ -113,8 +110,7 @@ if st.button('Tampilkan Rekomendasi'):
             with st.expander("Deskripsi"):
                 st.write(recommended_description[2])
             with st.expander("Harga Tiket Masuk"):
-                st.write(recommended_weekend[2])
-
+                st.write(recommended_price[2])
 
     with st.container():
         col1, col2 = st.columns(2)
@@ -127,8 +123,7 @@ if st.button('Tampilkan Rekomendasi'):
             with st.expander("Deskripsi"):
                 st.write(recommended_description[3])
             with st.expander("Harga Tiket Masuk"):
-                st.write(recommended_weekend[3])
-
+                st.write(recommended_price[3])
 
     with st.container():
         col1, col2 = st.columns(2)
@@ -141,4 +136,4 @@ if st.button('Tampilkan Rekomendasi'):
             with st.expander("Deskripsi"):
                 st.write(recommended_description[4])
             with st.expander("Harga Tiket Masuk"):
-                st.write(recommended_weekend[4])
+                st.write(recommended_price[5])
